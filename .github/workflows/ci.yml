@@ -38,12 +38,14 @@ jobs:
 
       - name: DB + migrations
         env:
-          DATABASE_URL: "mysql://theatre:theatre@127.0.0.1:3306/theatre_test?serverVersion=8.0"
+          APP_ENV: test
+          DATABASE_URL: "mysql://theatre:theatre@127.0.0.1:3306/theatre?serverVersion=8.0"
         run: |
          
-          php bin/console doctrine:migrations:migrate --env=test -n
+          php bin/console doctrine:migrations:migrate -n
 
       - name: PHPUnit
         env:
-          DATABASE_URL: "mysql://theatre:theatre@127.0.0.1:3306/theatre_test?serverVersion=8.0"
+          APP_ENV: test
+          DATABASE_URL: "mysql://theatre:theatre@127.0.0.1:3306/theatre?serverVersion=8.0"
         run: php bin/phpunit
