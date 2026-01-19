@@ -40,7 +40,7 @@ jobs:
         env:
           DATABASE_URL: "mysql://theatre:theatre@127.0.0.1:3306/theatre_test?serverVersion=8.0"
         run: |
-          php bin/console doctrine:database:create --env=test
+         
           php bin/console doctrine:migrations:migrate --env=test -n
 
       - name: PHPUnit
