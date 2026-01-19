@@ -36,7 +36,7 @@ class EvenementType extends AbstractType
                 'class' => Categorie::class,
                 'choice_label' => 'nom',
                 'multiple' => true,
-                'expanded' => true,
+                 'expanded' => true,
             ])
         ;
     }
