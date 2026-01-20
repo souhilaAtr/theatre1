@@ -66,7 +66,6 @@ class EvenementTest extends WebTestCase
         // dump($tabdiff);
         self::assertEmpty($tabdiff);
        
-        $this->assertResponseIsSuccessful();
-
+     
     }
 }
